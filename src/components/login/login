@@ -1,0 +1,30 @@
+import { styleSheets } from 'min-document';
+import React, { Component} from 'react';
+import {StyleSheet, View, Image} from 'react-native';
+
+export default class Login extends Component {
+   render(){
+       return (
+       <View style = {styles.container}>
+           <View style = {styles.logoContainer}>
+               <Image source = { require('.../InfoMe/assets/infoMe.png') }/>
+
+           </View>
+           <View style = {styles.formContainer}>
+
+           </View>
+
+       </View>
+       );
+   }
+}
+
+const styles = StyleSheet.create({
+   container:{
+       flex: 1,
+       backgroundColor: '#7CC480',
+   }
+
+
+
+});
