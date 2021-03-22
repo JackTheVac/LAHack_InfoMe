@@ -7,7 +7,7 @@ export default class Login extends Component {
        return (
        <View style = {styles.container}>
            <View style = {styles.logoContainer}>
-               <Image source = { require('.../assets/logo.png') }/>
+               <Image source = { require('../../../assets/InfoMeLogo.png') }/>
 
            </View>
            <View style = {styles.formContainer}>
