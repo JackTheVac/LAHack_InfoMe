@@ -2,20 +2,11 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-import Login from './src/components/login/login'
-import Register from './src/components/register/register'
-import RegAddress from './src/components/regAddress/regAddress'
-import Name from './src/components/name/name'
-import Occupation from './src/components/occupation/occupation'
-import AddInfo from './src/components/addInfo/addInfo'
-
 import * as firebase from 'firebase';
-
-
 const firebaseConfig = {
   apiKey: "AIzaSyAWFzFXweu4VL9uImTO-OQQTtoVvPfg9rA",
   authDomain: "infome-31dd7.firebaseapp.com",
-  databaseURL: "https://infome-31dd7-default-rtdb.firebaseio.com/",
+  databaseURL: "https://infome-31dd7-default-rtdb.firebaseio.com",
   projectId: "infome-31dd7",
   storageBucket: "infome-31dd7.appspot.com",
   messagingSenderId: "266415670678",
@@ -27,8 +18,8 @@ firebase.initializeApp(firebaseConfig);
 export default function App() {
   return (
     
-      //<Register/>
-      <Login />
+      <Register/>
+      //<Login />
 
       //<RegAddress/>
 
