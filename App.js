@@ -5,7 +5,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import Login from './src/components/login/login'
 import Register from './src/components/register/register'
 import RegAddress from './src/components/regAddress/regAddress'
-
+import Name from './src/components/name/name'
 
 export default function App() {
   return (
@@ -13,9 +13,9 @@ export default function App() {
       //<Register/>
       //<Login />
 
-      <RegAddress/>
+      //<RegAddress/>
 
-
+    <Name/>
       
     
    
