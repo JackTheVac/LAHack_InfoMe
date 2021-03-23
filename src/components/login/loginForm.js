@@ -78,9 +78,11 @@ export default class LoginForm extends Component {
                 onPress={()=> this.loginUser(this.state.email,this.state.password)}
 
             />
-
-            
-            
+            <Button
+                style = {styles.buttonContainer}
+                title = "New to InfoMe? Register here."
+                onPress={()=> alert('hi')}
+            />
             </View>
 
 
@@ -109,7 +111,11 @@ const styles = StyleSheet.create({
     buttonContainer: {
         backgroundColor: "#3C6435",
         paddingVertical: 15,
-        //justifyContent: 'flex-end'
+        // paddingHorizontal: 15,
+        // paddingBottom: 15,
+        // marginBottom: 15,
+        // marginTop: 15,
+        // justifyContent: 'space-evenly'
 
     },
 
