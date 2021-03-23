@@ -1,15 +1,42 @@
 import React, { Component } from 'react';
-import {StyleSheet, View, TextInput, TouchableOpacity, Text} from 'react-native';
+import {StyleSheet, View, TextInput, TouchableOpacity, Text, Button} from 'react-native';
+import * as firebase from 'firebase';
 
 export default class RegisterForm extends Component {
+
+    constructor(props){
+            super(props)
+            this.state = ({
+                email:'',
+                password:'',
+                confirmpassword:''
+                })
+        }
+
+    registerAcc = (email, password, confirmpassword) =>{
+        try{
+            if (this.state.password == this.state.confirmpassword){
+                firebase.auth().createUserWithEmailAndPassword(email, password)
+            }
+            else{
+                console.log('confirm same password entered')
+            }
+            }
+        catch(error){
+            console.log(error.toString())
+            }
+    }
+
+
     render() {
         return (
           
             <View style = {styles.container}>
                 <TextInput 
-                    placeholder = "Username or email"
+                    placeholder = "Email"
                     returnKeyType = "next"
-                    onSubmitEditing = { () => this.passwordInput.focus()}
+                    //onSubmitEditing = { () => this.setState({email})}
+                    onChangeText={(email)=>this.setState({email})}
                     keyboardType = "email-address"
                     style = {styles.input}
                     autoCapitalize = "none"
@@ -18,22 +45,29 @@ export default class RegisterForm extends Component {
                 <TextInput
                     placeholder = "Password"
                     returnKeyType = "next"
-                    onSubmitEditing = { () => this.comfirmPasswordInput.focus()}
+                   // onSubmitEditing = { () => this.setState({password})}
+                   onChangeText={(password)=>this.setState({password})}
                     secureTextEntry
-                    ref={(input) => this.passwordInput = input}
+                    //ref={(input) => this.passwordInput = input}
                     style = {styles.input}
                     />
                 <TextInput
                     placeholder = "Confirm Password"
                     secureTextEntry
                     returnKeyType = "go"
-                    ref={(input) => this.comfirmPasswordInput = input}
+                    //onSubmitEditing = { () => this.setState({confirmpassword})}
+                    //ref={(input) => this.setState({confirmpassword})}
+                    onChangeText={(confirmpassword)=>this.setState({confirmpassword})}
                     style = {styles.input}
                     />
 
-            <TouchableOpacity style = {styles.buttonContainer}>
-                <Text style = {styles.buttonText}>REGISTER</Text>
-            </TouchableOpacity>
+            <Button //touchable opacity styling?
+                    style = {styles.buttonContainer}
+                    title = "REGISTER"
+                    color = "#3C6435"
+                    onPress={()=> this.registerAcc(this.state.email, this.state.password, this.state.confirmpassword)} >
+                    <Text style = {styles.buttonText}>LOGIN</Text>
+                </Button>
             
             </View>
 
@@ -55,7 +89,7 @@ const styles = StyleSheet.create({
 
     },
     buttonContainer: {
-        backgroundColor: "#3C6435",
+        backgroundColor: '#3C6435',
         paddingVertical: 15,
     },
 
