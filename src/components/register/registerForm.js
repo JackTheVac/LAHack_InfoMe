@@ -15,16 +15,22 @@ export default class RegisterForm extends Component {
 
     registerAcc = (email, password, confirmpassword) =>{
         try{
-            if (this.state.password == this.state.confirmpassword){
+            if (this.state.password == this.state.confirmpassword && this.state.password.length >= 6){
                 firebase.auth().createUserWithEmailAndPassword(email, password)
             }
-            else{
-                console.log('confirm same password entered')
+            else if(this.state.password.length <= 6){
+                alert("Please enter at least 6 characters")
+                console.log('Please enter at least 6 characters')
             }
+            else if(this.state.password != this.state.confirmpassword) {
+                alert("Ensure both passwords entered match!")
+                console.log('Ensure both passwords entered match!')
             }
-        catch(error){
-            console.log(error.toString())
-            }
+        }
+        catch(exception){
+            console.log(exception.toString())
+            alert(exception.toString())
+        }
     }
 
 
