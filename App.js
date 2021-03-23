@@ -4,14 +4,16 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import Login from './src/components/login/login'
 import Register from './src/components/register/register'
+import RegAddress from './src/components/regAddress/regAddress'
+
 
 export default function App() {
   return (
     
       //<Register/>
-      <Login />
+      //<Login />
 
-
+      <RegAddress/>
 
 
       
