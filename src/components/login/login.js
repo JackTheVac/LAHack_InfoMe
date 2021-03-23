@@ -1,12 +1,13 @@
 import { styleSheets } from 'min-document';
 import React, { Component} from 'react';
-import {StyleSheet, View, Image, Text} from 'react-native';
+import {StyleSheet, View, Image, Text, KeyboardAvoidingView} from 'react-native';
 import LoginForm from './loginForm';
 
 export default class Login extends Component {
    render(){
        return (
-       <View style = {styles.container}>
+        
+       <KeyboardAvoidingView behavior = "padding" style = {styles.container}>
            <View style = {styles.logoContainer}>
                <Image source = { require('../../../assets/InfoMeLogo.png') }/>
                 <Text style = {styles.title}>Spread Awareness</Text>
@@ -15,7 +16,8 @@ export default class Login extends Component {
             <LoginForm />
            </View>
 
-       </View>
+       
+       </KeyboardAvoidingView>
        );
    }
 }
