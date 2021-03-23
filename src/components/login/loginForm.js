@@ -67,24 +67,14 @@ export default class LoginForm extends Component {
                     style = {styles.input}
                     onChangeText={(password) => this.setState({password})}
                     />
-<<<<<<< HEAD
-                
+
                 
            
             <View style = {styles.buttonContainer}>
             <Button
-                
-                title = "Login"
-=======
-
-            <Button //touchable opacity styling?
                 style = {styles.buttonContainer}
                 title = "LOGIN"
                 color = "#3C6435"
->>>>>>> 42dc18e3ca53d8f2f622a4190ef8290b946ba6c2
-                
-                color = "#3C6435"
-                
                 onPress={()=> this.loginUser(this.state.email,this.state.password)}
 
             />
@@ -116,18 +106,12 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10
 
     },
-<<<<<<< HEAD
+
     buttonContainer: {
-        
-        
-    justifyContent: 'flex-end'
-        
-        
-=======
-    buttonContainer: {  //look at styling for button this is for touchable opacity
         backgroundColor: "#3C6435",
         paddingVertical: 15,
->>>>>>> 42dc18e3ca53d8f2f622a4190ef8290b946ba6c2
+        justifyContent: 'flex-end'
+
     },
 
     buttonText:{
