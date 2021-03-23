@@ -26,7 +26,6 @@ export default class LoginForm extends Component {
             <Button
                 //style = {styles.buttonContainer}
                 title = "LOGIN"
-                
                 color = "#3C6435"
                 
                 
