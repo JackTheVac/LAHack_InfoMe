@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {StyleSheet, View, TextInput, TouchableOpacity, Text} from 'react-native';
+import {StyleSheet, View, TextInput, TouchableOpacity, Text, Button} from 'react-native';
 
 export default class LoginForm extends Component {
     render() {
@@ -23,9 +23,17 @@ export default class LoginForm extends Component {
                     style = {styles.input}
                     />
 
-            <TouchableOpacity style = {styles.buttonContainer}>
+            <Button
+                //style = {styles.buttonContainer}
+                title = "LOGIN"
+                
+                color = "#3C6435"
+                
+                
+
+            >
                 <Text style = {styles.buttonText}>LOGIN</Text>
-            </TouchableOpacity>
+            </Button>
             
             </View>
 

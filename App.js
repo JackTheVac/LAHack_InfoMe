@@ -13,14 +13,14 @@ export default function App() {
   return (
     
       //<Register/>
-      //<Login />
+      <Login />
 
       //<RegAddress/>
 
       //<Name/>
       //<Occupation/>
       
-      <AddInfo/>
+      //<AddInfo/>
     
    
   );
