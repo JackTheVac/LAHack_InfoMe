@@ -23,8 +23,8 @@ export default class LoginForm extends Component {
                     style = {styles.input}
                     />
 
-            <Button
-                //style = {styles.buttonContainer}
+            <Button //touchable opacity styling?
+                style = {styles.buttonContainer}
                 title = "LOGIN"
                 color = "#3C6435"
                 
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10
 
     },
-    buttonContainer: {
+    buttonContainer: {  //look at styling for button this is for touchable opacity
         backgroundColor: "#3C6435",
         paddingVertical: 15,
     },
