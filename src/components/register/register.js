@@ -6,7 +6,6 @@ import RegisterForm from './registerForm';
 export default class Register extends Component {
    render(){
        return (
-
        <KeyboardAvoidingView behavior = "padding" style = {styles.container}>
            <View style = {styles.logoContainer}>
                <Image source = { require('../../../assets/InfoMeLogo.png') }/>
@@ -15,7 +14,6 @@ export default class Register extends Component {
            <View style = {styles.formContainer}>
             <RegisterForm />
            </View>
-
 
        </KeyboardAvoidingView>
        );
