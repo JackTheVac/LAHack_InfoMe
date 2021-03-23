@@ -6,6 +6,8 @@ import Login from './src/components/login/login'
 import Register from './src/components/register/register'
 import RegAddress from './src/components/regAddress/regAddress'
 import Name from './src/components/name/name'
+import Occupation from './src/components/occupation/occupation'
+import AddInfo from './src/components/addInfo/addInfo'
 
 export default function App() {
   return (
@@ -15,8 +17,10 @@ export default function App() {
 
       //<RegAddress/>
 
-    <Name/>
+      //<Name/>
+      //<Occupation/>
       
+      <AddInfo/>
     
    
   );
