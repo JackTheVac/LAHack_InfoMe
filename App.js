@@ -25,8 +25,8 @@ firebase.initializeApp(firebaseConfig);
 export default function App() {
   return (
     
-      <Register/>
-      //<Login />
+      //<Register/>
+      <Login />
 
       //<RegAddress/>
 

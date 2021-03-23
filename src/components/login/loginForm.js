@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {StyleSheet, View, TextInput, TouchableOpacity, Text, Button} from 'react-native';
+import * as firebase from 'firebase';
 
 export default class LoginForm extends Component {
 
@@ -33,7 +34,7 @@ export default class LoginForm extends Component {
 
         try{
 
-            firebase.auth.signInWithEmailAndPassword(email,password).then(function(user){
+            firebase.auth().signInWithEmailAndPassword(email,password).then(function(user){
                 console.log(user)
 
             })
@@ -70,7 +71,6 @@ export default class LoginForm extends Component {
 
                 
            
-            <View style = {styles.buttonContainer}>
             <Button
                 style = {styles.buttonContainer}
                 title = "LOGIN"
@@ -78,8 +78,7 @@ export default class LoginForm extends Component {
                 onPress={()=> this.loginUser(this.state.email,this.state.password)}
 
             />
-            </View>
-            
+
             
             
             </View>
@@ -91,11 +90,11 @@ export default class LoginForm extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        marginBottom: '60%',
+        //marginBottom: '60%',
         padding: 20,
-        flex: 1,
-        
-        
+        //flex: 1,
+
+
     },
 
     input: {
@@ -110,13 +109,13 @@ const styles = StyleSheet.create({
     buttonContainer: {
         backgroundColor: "#3C6435",
         paddingVertical: 15,
-        justifyContent: 'flex-end'
+        //justifyContent: 'flex-end'
 
     },
 
     buttonText:{
         textAlign: 'center',
-        color : '#000000',
+        color : '#FFFFFF',
         fontWeight: '600',
     }
 
