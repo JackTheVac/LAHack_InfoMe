@@ -1,5 +1,5 @@
 import React, { Component} from 'react';
-import {StyleSheet, View, Image, Text, KeyboardAvoidingView} from 'react-native';
+import {StyleSheet, View, Image, Text, KeyboardAvoidingView, Button} from 'react-native';
 import OccupationForm from './occupationForm';
 import '../../config/global.js'
 
@@ -9,6 +9,12 @@ export default class Occupation extends Component {
              <KeyboardAvoidingView behavior = "padding" style = {styles.container}>
                 <View style = {styles.formContainer}>
                     <OccupationForm/>
+                    <Button
+                    //style = {styles.buttonContainer}
+                    title = "Finish"
+                    color = "#3C6435"
+                    onPress={() => this.props.navigation.navigate('Home')}
+                    />
                 </View>
 
 

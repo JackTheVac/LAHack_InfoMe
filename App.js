@@ -14,6 +14,7 @@ import Occupation from './src/components/occupation/occupation'
 import AddInfo from './src/components/addInfo/addInfo'
 import Gender from './src/components/gender/gender'
 import Age from './src/components/age/age'
+import Home from './src/components/home/home'
 import { render } from 'react-dom';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation'
@@ -28,13 +29,14 @@ import { createAppContainer } from 'react-navigation'
 // }
 const AppStackNavigator = createStackNavigator(
 {
-  Login: Login,
-  Register: Register,
-  Name: Name,
-  Gender: Gender,
-  Age: Age,
-  Address: RegAddress,
-  Occupation: Occupation,
+  Login: {screen: Login, navigationOptions: {}},
+  Register: {screen: Register, navigationOptions: {}},
+  Name: {screen: Name, navigationOptions: {headerLeft: () => null}},
+  Gender: {screen: Gender, navigationOptions: {}},
+  Age: {screen: Age, navigationOptions: {headerLeft: () => null}},
+  Address: {screen: RegAddress, navigationOptions: {}},
+  Occupation: {screen: Occupation, navigationOptions: {}},
+  Home: {screen: Home, navigationOptions: {headerLeft: () => null}}
 },
 {
   initialRouteName: 'Login'

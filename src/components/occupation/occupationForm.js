@@ -22,9 +22,9 @@ export default class OccupationForm extends Component {
                     autoCorrect = {false}
                 />
 
-                <TouchableOpacity style = {styles.buttonContainer}>
+                {/* <TouchableOpacity style = {styles.buttonContainer}>
                     <Text style = {styles.buttonText}>NEXT</Text>
-                </TouchableOpacity>
+                </TouchableOpacity> */}
             </View>
         );
     }
