@@ -4,20 +4,20 @@ import {StyleSheet, View, Image, Text, KeyboardAvoidingView} from 'react-native'
 import RegisterForm from './registerForm';
 
 export default class Register extends Component {
-   render(){
-       return (
-       <KeyboardAvoidingView behavior = "padding" style = {styles.container}>
-           <View style = {styles.logoContainer}>
-               <Image source = { require('../../../assets/InfoMeLogo.png') }/>
+    render(){
+        return (
+        <KeyboardAvoidingView behavior = "padding" style = {styles.container}>
+            <View style = {styles.logoContainer}>
+                <Image source = { require('../../../assets/InfoMeLogo.png') }/>
                 <Text style = {styles.title}>Spread Awareness</Text>
-           </View>
-           <View style = {styles.formContainer}>
-            <RegisterForm />
-           </View>
+            </View>
 
-       </KeyboardAvoidingView>
-       );
-   }
+            <View style = {styles.formContainer}>
+                <RegisterForm />
+            </View>
+        </KeyboardAvoidingView>
+        );
+    }
 }
 
 const styles = StyleSheet.create({
@@ -31,14 +31,11 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     justifyContent: 'center'
    },
+
    title : {
       color: '#fff',
       marginTop: 10,
       textAlign: 'center',
       opacity: 0.5,
-
    }
-
-
-
 });
