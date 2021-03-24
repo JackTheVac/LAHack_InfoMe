@@ -10,12 +10,14 @@ export default class Age extends Component {
             <KeyboardAvoidingView behavior = "padding" style = {styles.container}>
                 <View style = {styles.formContainer}>
                     <AgeForm />
+                    <View style={{ borderRadius:  20 ,width:  120, height:  50, alignSelf: 'center'  , marginBottom:  20, backgroundColor:  'white' , borderWidth:  2, justifyContent:  'center', textAlign:  'center', margin:  10}}>
                     <Button
                     //style = {styles.buttonContainer}
                     title = "Next"
                     color = "#3C6435"
                     onPress={() => this.props.navigation.navigate('Address')}
             />
+                </View>
                 </View>
             </KeyboardAvoidingView>
         );

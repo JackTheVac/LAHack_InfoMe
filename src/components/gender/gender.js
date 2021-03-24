@@ -25,12 +25,14 @@ export default class Gender extends Component {
             <KeyboardAvoidingView behavior = "padding" style = {styles.container}>
                 <View style = {styles.formContainer}>
                     <GenderForm />
+                    <View style={{ borderRadius:  20 ,width:  200, height:  50, alignSelf: 'center'  , marginBottom:  20, backgroundColor:  'white' , borderWidth:  2, justifyContent:  'center', textAlign:  'center', margin:  10}}>
                     <Button //touchable opacity styling?
                     style = {styles.buttonContainer}
                     title = "Confirm and Proceed"
                     color = "#3C6435"
                     onPress={()=> this.recordGender(this.state.gender)}
                 />
+                </View>
                 </View>
             </KeyboardAvoidingView>
         );
