@@ -39,6 +39,7 @@ const AppStackNavigator = createStackNavigator(
 );
 
 const TempApp = createAppContainer(AppStackNavigator);
+
 export default class App extends Component {
   render() {
     return <TempApp/>
