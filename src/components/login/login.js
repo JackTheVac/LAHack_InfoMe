@@ -20,7 +20,8 @@ export default class Login extends Component {
         try{
             firebase.auth().signInWithEmailAndPassword(email,password).then(function(user){
                 console.log(user)
-            })
+                })
+                this.props.navigation.navigate('Home')
         }
         catch(error){
             console.log(error.toString())
