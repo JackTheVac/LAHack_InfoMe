@@ -35,12 +35,12 @@ export default class GenderForm extends Component {
                     autoCorrect = {false}
                 />
 
-                <Button //touchable opacity styling?
+                {/* <Button //touchable opacity styling?
                     style = {styles.buttonContainer}
                     title = "Confirm and Proceed"
                     color = "#3C6435"
                     onPress={()=> this.recordGender(this.state.gender)}
-                />
+                /> */}
             </View>
         );
     }

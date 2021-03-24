@@ -13,6 +13,7 @@ import Name from './src/components/name/name'
 import Occupation from './src/components/occupation/occupation'
 import AddInfo from './src/components/addInfo/addInfo'
 import Gender from './src/components/gender/gender'
+import Age from './src/components/age/age'
 import { render } from 'react-dom';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation'
@@ -31,6 +32,9 @@ const AppStackNavigator = createStackNavigator(
   Register: Register,
   Name: Name,
   Gender: Gender,
+  Age: Age,
+  Address: RegAddress,
+  Occupation: Occupation,
 },
 {
   initialRouteName: 'Login'
