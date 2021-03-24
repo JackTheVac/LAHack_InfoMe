@@ -2,8 +2,10 @@ import { styleSheets } from 'min-document';
 import React, { Component} from 'react';
 import {StyleSheet, View, Image, Text, KeyboardAvoidingView, Button} from 'react-native';
 import LoginForm from './loginForm';
+import '../../config/global.js'
 
 export default class Login extends Component {
+
    render(){
        return (
         
@@ -25,6 +27,7 @@ export default class Login extends Component {
        </KeyboardAvoidingView>
        );
    }
+
 }
 
 const styles = StyleSheet.create({
@@ -38,6 +41,7 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     justifyContent: 'center'
    },
+
    title : {
       color: '#fff',
       marginTop: 10,
@@ -45,7 +49,4 @@ const styles = StyleSheet.create({
       opacity: 0.5,
 
    }
-
-
-
 });

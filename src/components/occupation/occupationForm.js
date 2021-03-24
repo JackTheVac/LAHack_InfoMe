@@ -13,6 +13,7 @@ export default class OccupationForm extends Component {
                     autoCapitalize = "none"
                     autoCorrect = {false}
                 />
+
                 <TextInput 
                     placeholder = "School (If Applicable)"
                     returnKeyType = "next"
@@ -21,17 +22,10 @@ export default class OccupationForm extends Component {
                     autoCorrect = {false}
                 />
 
-
                 <TouchableOpacity style = {styles.buttonContainer}>
                     <Text style = {styles.buttonText}>NEXT</Text>
                 </TouchableOpacity>
-
-
-
             </View>
-
-
-
         );
     }
 }
@@ -41,6 +35,7 @@ const styles = StyleSheet.create({
     container: {
         padding: 20,
     },
+
     input: {
         height: 40,
         backgroundColor: '#C5E3C6',
@@ -49,6 +44,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10
 
     },
+
     buttonContainer: {
         backgroundColor: "#3C6435",
         paddingVertical: 15,
@@ -59,5 +55,4 @@ const styles = StyleSheet.create({
         color : '#FFFFFF',
         fontWeight: '600',
     }
-
 });

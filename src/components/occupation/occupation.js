@@ -1,6 +1,7 @@
 import React, { Component} from 'react';
 import {StyleSheet, View, Image, Text, KeyboardAvoidingView} from 'react-native';
 import OccupationForm from './occupationForm';
+import '../../config/global.js'
 
 export default class Occupation extends Component {
     render(){

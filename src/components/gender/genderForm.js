@@ -8,7 +8,6 @@ const userdata = firebase.firestore();
 
 
 export default class GenderForm extends Component {
-
     constructor(props){
         super(props)
         this.state = ({
@@ -35,6 +34,7 @@ export default class GenderForm extends Component {
                     autoCapitalize = "none"
                     autoCorrect = {false}
                 />
+
                 <Button //touchable opacity styling?
                     style = {styles.buttonContainer}
                     title = "Confirm and Proceed"
@@ -76,5 +76,4 @@ const styles = StyleSheet.create({
         color : '#FFFFFF',
         fontWeight: '600',
     }
-
 });
