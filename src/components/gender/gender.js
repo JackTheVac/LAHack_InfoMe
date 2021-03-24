@@ -39,7 +39,7 @@ export default class Gender extends Component {
                     <View style={{ borderRadius:  20 ,width:  200, height:  50, alignSelf: 'center'  , marginBottom:  20, backgroundColor:  'white' , borderWidth:  2, justifyContent:  'center', textAlign:  'center', margin:  10}}>
                         <Button //touchable opacity styling?
                         style = {styles.buttonContainer}
-                        title = "Confirm and Proceed"
+                        title = "Next"
                         color = "#3C6435"
                         onPress={()=> this.recordGender(this.state.gender)}
                         />
@@ -53,7 +53,7 @@ export default class Gender extends Component {
 const styles = StyleSheet.create({
     container:{
         flex: 1,
-        backgroundColor: '#7CC480',
+        backgroundColor: '#C3FDCB',
         justifyContent: 'center'
     },
 
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
 
      input: {
          height: 40,
-         backgroundColor: '#C5E3C6',
+         backgroundColor: 'white',
          marginBottom: 20,
          color: '#000000',
          paddingHorizontal: 10

@@ -67,7 +67,7 @@ export default class Name extends Component {
 const styles = StyleSheet.create({
    container:{
        flex: 1,
-       backgroundColor: '#7CC480',
+       backgroundColor: '#C3FDCB',
    },
 
    logoContainer : {
@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
 
     input: {
         height: 40,
-        backgroundColor: '#C5E3C6',
+        backgroundColor: 'white',
         marginBottom: 20,
         color: '#000000',
         paddingHorizontal: 10
