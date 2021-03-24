@@ -1,6 +1,6 @@
 import { styleSheets } from 'min-document';
 import React, { Component} from 'react';
-import {StyleSheet, View, Image, Text, KeyboardAvoidingView} from 'react-native';
+import {StyleSheet, View, Image, Text, KeyboardAvoidingView, Button} from 'react-native';
 import LoginForm from './loginForm';
 
 export default class Login extends Component {
@@ -14,6 +14,11 @@ export default class Login extends Component {
            </View>
            <View style = {styles.formContainer}>
             <LoginForm />
+            <Button
+                style = {styles.buttonContainer}
+                title = "New to InfoMe? Register here."
+                onPress={() => this.props.navigation.navigate('Register')}
+            />
            </View>
 
        

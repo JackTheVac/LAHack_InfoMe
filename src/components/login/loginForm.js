@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {StyleSheet, View, TextInput, TouchableOpacity, Text, Button} from 'react-native';
 import * as firebase from 'firebase';
+import AppTemp from '../../../App'
 
 export default class LoginForm extends Component {
 
@@ -46,7 +47,7 @@ export default class LoginForm extends Component {
     }
     render() {
         return (
-          
+            
             <View style = {styles.container}>
 
                 
@@ -76,13 +77,8 @@ export default class LoginForm extends Component {
                 title = "LOGIN"
                 color = "#3C6435"
                 onPress={()=> this.loginUser(this.state.email,this.state.password)}
-
             />
-            <Button
-                style = {styles.buttonContainer}
-                title = "New to InfoMe? Register here."
-                onPress={()=> alert('hi')}
-            />
+            
             </View>
 
 
