@@ -1,7 +1,7 @@
 import React, { Component} from 'react';
 import {StyleSheet, View, Image, Text, KeyboardAvoidingView} from 'react-native';
 import AddInfoForm from './addInfoForm';
-import './src/config/global.js'
+import '../../config/global.js'
 
 export default class AddInfo extends Component {
     render(){

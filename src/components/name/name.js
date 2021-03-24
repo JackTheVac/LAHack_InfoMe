@@ -2,8 +2,7 @@ import { styleSheets } from 'min-document';
 import React, { Component} from 'react';
 import {StyleSheet, View, Image, Text, KeyboardAvoidingView} from 'react-native';
 import NameForm from './nameForm';
-import './src/config/global.js'
-
+import '../../config/global.js'
 
 export default class Name extends Component {
    render(){

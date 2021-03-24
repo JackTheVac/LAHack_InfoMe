@@ -2,6 +2,7 @@ import { styleSheets } from 'min-document';
 import React, { Component} from 'react';
 import {StyleSheet, View, Image, Text, KeyboardAvoidingView} from 'react-native';
 import AgeForm from './ageForm';
+import '../../config/global.js'
 
 export default class Age extends Component {
     render(){

@@ -17,23 +17,22 @@ export default class Gender extends Component {
 }
 
 const styles = StyleSheet.create({
-   container:{
-       flex: 1,
-       backgroundColor: '#7CC480',
-       justifyContent: 'center'
-   },
+    container:{
+        flex: 1,
+        backgroundColor: '#7CC480',
+        justifyContent: 'center'
+    },
 
-   logoContainer : {
-    alignItems: 'center',
-    flexGrow: 1,
-    justifyContent: 'center'
-   },
+    logoContainer : {
+        alignItems: 'center',
+        flexGrow: 1,
+        justifyContent: 'center'
+    },
 
-   title : {
-      color: '#fff',
-      marginTop: 10,
-      textAlign: 'center',
-      opacity: 0.5,
-
-   }
+    title : {
+        color: '#fff',
+        marginTop: 10,
+        textAlign: 'center',
+        opacity: 0.5,
+    }
 });
