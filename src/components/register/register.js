@@ -45,7 +45,7 @@ export default class Register extends Component {
             </View>
 
             <View style = {styles.formContainer}>
-            <TextInput 
+                <TextInput
                     placeholder = "Email"
                     returnKeyType = "next"
                     //onSubmitEditing = { () => this.setState({email})}
@@ -54,7 +54,6 @@ export default class Register extends Component {
                     style = {styles.input}
                     autoCapitalize = "none"
                     autoCorrect = {false}
-                    
                 />
 
                 <TextInput
@@ -81,7 +80,7 @@ export default class Register extends Component {
                     style = {styles.buttonContainer}
                     title = "REGISTER"
                     color = "#3C6435"
-                    onPress={()=> this.registerAcc(this.state.email, this.state.password, this.state.confirmPass)} >
+                    onPress={()=> this.registerAcc(this.state.email, this.state.password, this.state.confirmPass)}>
                     <Text style = {styles.buttonText}>LOGIN</Text>
                 </Button>
                 </View>
@@ -95,7 +94,7 @@ export default class Register extends Component {
 const styles = StyleSheet.create({
    container:{
        flex: 1,
-       backgroundColor: '#7CC480',
+       backgroundColor: '#C3FDCB',
    },
 
    logoContainer : {
@@ -112,7 +111,7 @@ const styles = StyleSheet.create({
    },
    input: {
     height: 40,
-    backgroundColor: '#C5E3C6',
+    backgroundColor: 'white',
     marginBottom: 20,
     color: '#000000',
     paddingHorizontal: 10

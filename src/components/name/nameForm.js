@@ -5,7 +5,7 @@ import {StyleSheet, View, TextInput, TouchableOpacity, Text} from 'react-native'
 export default class NameForm extends Component {
     render() {
         return (
-            <View style = {styles.container}>
+            <View style = {styles.nameFormContainer}>
                 <TextInput 
                     placeholder = "Full Name"
                     returnKeyType = "next"
@@ -24,17 +24,13 @@ export default class NameForm extends Component {
                     autoCapitalize = "none"
                     autoCorrect = {false}
                 />
-
-                {/* <TouchableOpacity style = {styles.buttonContainer}>
-                    <Text style = {styles.buttonText}>NEXT</Text>
-                </TouchableOpacity> */}
             </View>
         );
     }
 }
 
 const styles = StyleSheet.create({
-    container: {
+    nameFormContainer: {
         padding: 20,
     },
 
@@ -45,18 +41,4 @@ const styles = StyleSheet.create({
         color: '#000000',
         paddingHorizontal: 10
     },
-
-    buttonContainer: {
-        backgroundColor: "#3C6435",
-        paddingVertical: 15,
-        flex: 1,
-        justifyContent: 'flex-end',
-        marginBottom: 36
-    },
-
-    buttonText:{
-        textAlign: 'center',
-        color : '#FFFFFF',
-        fontWeight: '600',
-    }
 });

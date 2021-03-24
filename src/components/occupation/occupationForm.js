@@ -5,7 +5,7 @@ import {StyleSheet, View, TextInput, TouchableOpacity, Text} from 'react-native'
 export default class OccupationForm extends Component {
     render() {
         return (
-            <View style = {styles.container}>
+            <View style = {styles.formContainer}>
                 <TextInput 
                     placeholder = "Enter Occupation/Job"
                     returnKeyType = "next"
@@ -32,13 +32,13 @@ export default class OccupationForm extends Component {
 
 
 const styles = StyleSheet.create({
-    container: {
+    formContainer: {
         padding: 20,
     },
 
     input: {
         height: 40,
-        backgroundColor: '#C5E3C6',
+        backgroundColor: 'white',
         marginBottom: 20,
         color: '#000000',
         paddingHorizontal: 10
