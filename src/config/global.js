@@ -16,3 +16,11 @@ firebase.initializeApp(firebaseConfig);
 const userdata = firebase.firestore();
 
 global.userdata = userdata;
+
+global.user = firebase.auth().currentUser;
+
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    global.user = firebase.auth().currentUser;
+  }
+});
