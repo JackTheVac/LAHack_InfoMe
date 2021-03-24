@@ -73,7 +73,7 @@ export default class LoginForm extends Component {
                 
            <View style={{ borderRadius:  20 ,width:  120, height:  50, alignSelf: 'center'  , marginBottom:  20, backgroundColor:  'white' , borderWidth:  2, justifyContent:  'center', textAlign:  'center', margin:  10}}>
            <Button
-                style = {styles.buttonContainer}
+                //style = {styles.buttonContainer}
                 title = "LOGIN"
                 color = "#3C6435"
                 onPress={()=> this.loginUser(this.state.email,this.state.password)}
@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
 
     input: {
         height: 40,
-        backgroundColor: '#C5E3C6',
+        backgroundColor: '#C1CBFC',
         marginBottom: 20,
         color: '#000000',
         paddingHorizontal: 10

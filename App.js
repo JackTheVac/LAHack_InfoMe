@@ -18,7 +18,7 @@ import { render } from 'react-dom';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation'
 
-const AppColor = "#FF6666";
+const AppColor = "#C1CBFC";
 
 
 // export default class App extends Component {

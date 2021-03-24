@@ -4,6 +4,8 @@ import {StyleSheet, View, Image, Text, KeyboardAvoidingView, Button} from 'react
 import LoginForm from './loginForm';
 import '../../config/global.js'
 
+const BGCforAPP = '#C3FDCB'
+
 export default class Login extends Component {
 
    render(){
@@ -33,7 +35,7 @@ export default class Login extends Component {
 const styles = StyleSheet.create({
    container:{
        flex: 1,
-       backgroundColor: '#7CC480',
+       backgroundColor: BGCforAPP,
    },
 
    logoContainer : {
@@ -43,7 +45,7 @@ const styles = StyleSheet.create({
    },
 
    title : {
-      color: '#fff',
+      color: 'red',
       marginTop: 10,
       textAlign: 'center',
       opacity: 0.5,
