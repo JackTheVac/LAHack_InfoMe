@@ -15,21 +15,6 @@ export default class LoginForm extends Component {
         })
     }
 
-    //signUpUser = (email,password) =>{
-
-    //    try{
-
-    //        if(this.state.password.length < 6){
-    //    alert("Please enter atleast 6 characters")
-    //    return;
-    //    firebase.auth().createUserWithEmailAndPassword(email, password)
-    //}
-    //    }
-    //    catch(error){
-    //        console.log(error.toString())
-    //     }
-
-    // }
 
     loginUser = (email,password) =>{
 
@@ -47,49 +32,43 @@ export default class LoginForm extends Component {
     }
     render() {
         return (
-            
-            <View style = {styles.container}>
-
-                
-                <TextInput 
-                    placeholder = "Username or email"
-                    returnKeyType = "next"
-                    onSubmitEditing = { () => this.passwordInput.focus()}
-                    keyboardType = "email-address"
-                    style = {styles.input}
-                    autoCapitalize = "none"
-                    autoCorrect = {false}
-                    onChangeText={(email) => this.setState({email})}
-                    />
+            <View style = {styles.entryFormContainer}>
                 <TextInput
-                    placeholder = "Password"
-                    secureTextEntry
-                    returnKeyType = "go"
-                    ref={(input) => this.passwordInput = input}
-                    style = {styles.input}
-                    onChangeText={(password) => this.setState({password})}
-                    />
+                placeholder = "Username or email"
+                returnKeyType = "next"
+                onSubmitEditing = { () => this.passwordInput.focus()}
+                keyboardType = "email-address"
+                style = {styles.input}
+                autoCapitalize = "none"
+                autoCorrect = {false}
+                onChangeText={(email) => this.setState({email})}
+                />
 
-                
-           <View style={{ borderRadius:  20 ,width:  120, height:  50, alignSelf: 'center'  , marginBottom:  20, backgroundColor:  'white' , borderWidth:  2, justifyContent:  'center', textAlign:  'center', margin:  10}}>
-           <Button
+                <TextInput
+                placeholder = "Password"
+                secureTextEntry
+                returnKeyType = "go"
+                ref={(input) => this.passwordInput = input}
+                style = {styles.input}
+                onChangeText={(password) => this.setState({password})}
+                />
+
+                <View style={{ borderRadius:  20 ,width:  120, height:  50, alignSelf: 'center'  , marginBottom:  20, backgroundColor:  'white' , borderWidth:  2, justifyContent:  'center', textAlign:  'center', margin:  10}}>
+                <Button
                 //style = {styles.buttonContainer}
                 title = "LOGIN"
                 color = "#3C6435"
                 onPress={()=> this.loginUser(this.state.email,this.state.password)}
-            />
-           </View>
-            
-            
+                />
+
+                </View>
             </View>
-
-
         );
     }
 }
 
 const styles = StyleSheet.create({
-    container: {
+    entryFormContainer: {
         //marginBottom: '60%',
         padding: 20,
         //flex: 1,
