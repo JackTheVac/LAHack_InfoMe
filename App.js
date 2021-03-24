@@ -18,6 +18,8 @@ import { render } from 'react-dom';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation'
 
+const AppColor = "#FF6666";
+
 
 // export default class App extends Component {
 //   render() {
@@ -35,10 +37,24 @@ const AppStackNavigator = createStackNavigator(
   Age: Age,
   Address: RegAddress,
   Occupation: Occupation,
+ 
 },
 {
-  initialRouteName: 'Login'
-}
+  initialRouteName: 'Login',
+
+  defaultNavigationOptions: {
+    headerStyle: {
+      backgroundColor: AppColor,
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      color: '#fff',
+    },
+  },
+
+ 
+},
+
 
 );
 
@@ -48,9 +64,12 @@ export default class App extends Component {
   render() {
     return (
 
-
-       <TempApp/>
-    
+      // <View
+      // backgroundColor = "black">
+      //     <TempApp/>
+      // </View>
+      <TempApp/>
+     
    
     );
   }
