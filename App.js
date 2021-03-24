@@ -64,10 +64,6 @@ export default class App extends Component {
   render() {
     return (
 
-      // <View
-      // backgroundColor = "black">
-      //     <TempApp/>
-      // </View>
       <TempApp/>
      
    
