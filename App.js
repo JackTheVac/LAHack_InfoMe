@@ -42,7 +42,13 @@ const TempApp = createAppContainer(AppStackNavigator);
 
 export default class App extends Component {
   render() {
-    return <TempApp/>
+    return (
+
+
+       <TempApp/>
+    
+   
+    );
   }
 }
 

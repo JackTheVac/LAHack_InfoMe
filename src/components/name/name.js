@@ -11,12 +11,16 @@ export default class Name extends Component {
        <KeyboardAvoidingView behavior = "padding" style = {styles.container}>
            <View style = {styles.formContainer}>
             <NameForm />
+            <View style={{ borderRadius:  20 ,width:  120, height:  50, alignSelf: 'center'  , marginBottom:  20, backgroundColor:  'white' , borderWidth:  2, justifyContent:  'center', textAlign:  'center', margin:  10}}>
             <Button
-                //style = {styles.buttonContainer}
+                style = {styles.buttonContainer}
+               
                 title = "Next"
                 color = "#3C6435"
                 onPress={() => this.props.navigation.navigate('Gender')}
             />
+            </View>
+            
            </View>
 
        
@@ -46,9 +50,9 @@ const styles = StyleSheet.create({
    buttonContainer: {
     backgroundColor: "#3C6435",
     paddingVertical: 30,
-    //flex: 1,
-    //justifyContent: 'flex-end',
-    //marginBottom: 36
+    flex: 1,
+    justifyContent: 'flex-end',
+    marginBottom: 0
 },
 
 });

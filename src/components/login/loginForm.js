@@ -71,13 +71,15 @@ export default class LoginForm extends Component {
                     />
 
                 
-           
-            <Button
+           <View style={{ borderRadius:  20 ,width:  120, height:  50, alignSelf: 'center'  , marginBottom:  20, backgroundColor:  'white' , borderWidth:  2, justifyContent:  'center', textAlign:  'center', margin:  10}}>
+           <Button
                 style = {styles.buttonContainer}
                 title = "LOGIN"
                 color = "#3C6435"
                 onPress={()=> this.loginUser(this.state.email,this.state.password)}
             />
+           </View>
+            
             
             </View>
 

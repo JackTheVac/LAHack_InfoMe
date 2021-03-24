@@ -54,6 +54,7 @@ export default class Register extends Component {
                     style = {styles.input}
                     autoCapitalize = "none"
                     autoCorrect = {false}
+                    
                 />
 
                 <TextInput
@@ -75,7 +76,7 @@ export default class Register extends Component {
                     onChangeText={(confirmPass)=>this.setState({confirmPass})}
                     style = {styles.input}
                 />
-                
+                <View style={{ borderRadius:  20 ,width:  120, height:  50, alignSelf: 'center'  , marginBottom:  20, backgroundColor:  'white' , borderWidth:  2, justifyContent:  'center', textAlign:  'center', margin:  10}}>
                 <Button //touchable opacity styling?
                     style = {styles.buttonContainer}
                     title = "REGISTER"
@@ -83,6 +84,8 @@ export default class Register extends Component {
                     onPress={()=> this.registerAcc(this.state.email, this.state.password, this.state.confirmPass)} >
                     <Text style = {styles.buttonText}>LOGIN</Text>
                 </Button>
+                </View>
+                
             </View>
         </KeyboardAvoidingView>
         );
