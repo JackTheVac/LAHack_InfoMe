@@ -29,7 +29,8 @@ const AppStackNavigator = createStackNavigator(
 {
   Login: Login,
   Register: Register,
-  //Name: Name,
+  Name: Name,
+  Gender: Gender,
 },
 {
   initialRouteName: 'Login'
