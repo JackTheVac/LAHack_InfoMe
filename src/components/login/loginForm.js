@@ -3,17 +3,13 @@ import {StyleSheet, View, TextInput, TouchableOpacity, Text, Button} from 'react
 import * as firebase from 'firebase';
 
 export default class LoginForm extends Component {
-
     constructor(props){
         super(props)
-
         this.state = ({
-
             email: '',
             password: ''
         })
     }
-
     //signUpUser = (email,password) =>{
 
     //    try{
@@ -27,29 +23,23 @@ export default class LoginForm extends Component {
     //    catch(error){
     //        console.log(error.toString())
     //     }
-
     // }
 
     loginUser = (email,password) =>{
-
         try{
-
             firebase.auth().signInWithEmailAndPassword(email,password).then(function(user){
                 console.log(user)
-
             })
         }
+
         catch(error){
             console.log(error.toString())
         }
-
     }
+
     render() {
         return (
-          
             <View style = {styles.container}>
-
-                
                 <TextInput 
                     placeholder = "Username or email"
                     returnKeyType = "next"
@@ -60,6 +50,7 @@ export default class LoginForm extends Component {
                     autoCorrect = {false}
                     onChangeText={(email) => this.setState({email})}
                     />
+
                 <TextInput
                     placeholder = "Password"
                     secureTextEntry
@@ -69,34 +60,29 @@ export default class LoginForm extends Component {
                     onChangeText={(password) => this.setState({password})}
                     />
 
-                
-           
-            <Button
-                style = {styles.buttonContainer}
-                title = "LOGIN"
-                color = "#3C6435"
-                onPress={()=> this.loginUser(this.state.email,this.state.password)}
+                <Button
+                    style = {styles.buttonContainer}
+                    title = "LOGIN"
+                    color = "#3C6435"
+                    onPress={()=> this.loginUser(this.state.email,this.state.password)}
+                />
 
-            />
-            <Button
-                style = {styles.buttonContainer}
-                title = "New to InfoMe? Register here."
-                onPress={()=> alert('hi')}
-            />
+                <Button
+                    style = {styles.buttonContainer}
+                    title = "New to InfoMe? Register here."
+                    onPress={()=> alert('hi')}
+                />
             </View>
-
-
         );
     }
 }
+
 
 const styles = StyleSheet.create({
     container: {
         //marginBottom: '60%',
         padding: 20,
         //flex: 1,
-
-
     },
 
     input: {
@@ -105,7 +91,6 @@ const styles = StyleSheet.create({
         marginBottom: 20,
         color: '#000000',
         paddingHorizontal: 10
-
     },
 
     buttonContainer: {
@@ -116,7 +101,6 @@ const styles = StyleSheet.create({
         // marginBottom: 15,
         // marginTop: 15,
         // justifyContent: 'space-evenly'
-
     },
 
     buttonText:{
@@ -124,5 +108,4 @@ const styles = StyleSheet.create({
         color : '#FFFFFF',
         fontWeight: '600',
     }
-
 });

@@ -5,7 +5,6 @@ import {StyleSheet, View, TextInput, TouchableOpacity, Text} from 'react-native'
 export default class AddInfoForm extends Component {
     render() {
         return (
-         
             <View>
                 <View style = {styles.container}>
                     <TextInput 
@@ -18,14 +17,8 @@ export default class AddInfoForm extends Component {
                     <TouchableOpacity style = {styles.buttonContainer}>
                         <Text style = {styles.buttonText}>Finish</Text>
                     </TouchableOpacity>
-
-
                 </View>
             </View>
-                
-            
-
-
         );
     }
 }

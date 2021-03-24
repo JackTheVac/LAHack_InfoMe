@@ -1,6 +1,7 @@
 import React, { Component} from 'react';
 import {StyleSheet, View, Image, Text, KeyboardAvoidingView} from 'react-native';
 import AddInfoForm from './addInfoForm';
+import './src/config/global.js'
 
 export default class AddInfo extends Component {
     render(){
@@ -9,21 +10,15 @@ export default class AddInfo extends Component {
                 <View style = {styles.formContainer}>
                     <AddInfoForm/>
                 </View>
-
-
              </KeyboardAvoidingView>
-
-        
         );
     }
  }
+
 
  const styles = StyleSheet.create({
     container:{
         flex: 1,
         backgroundColor: '#7CC480',
-    },
- 
-   
- 
+    }
  });

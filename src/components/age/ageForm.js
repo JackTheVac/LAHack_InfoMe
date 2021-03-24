@@ -5,7 +5,6 @@ import {StyleSheet, View, TextInput, TouchableOpacity, Text} from 'react-native'
 export default class AgeForm extends Component {
     render() {
         return (
-          
             <View style = {styles.container}>
                 <TextInput
                     placeholder = "Age"
@@ -16,29 +15,28 @@ export default class AgeForm extends Component {
                     autoCorrect = {false}
                 />
 
-            <TouchableOpacity style = {styles.buttonContainer}>
-                <Text style = {styles.buttonText}>NEXT</Text>
-            </TouchableOpacity>
-            
+                <TouchableOpacity style = {styles.buttonContainer}>
+                    <Text style = {styles.buttonText}>NEXT</Text>
+                </TouchableOpacity>
             </View>
-
-
         );
     }
 }
+
 
 const styles = StyleSheet.create({
     container: {
         padding: 20,
     },
+
     input: {
         height: 40,
         backgroundColor: '#C5E3C6',
         marginBottom: 20,
         color: '#000000',
         paddingHorizontal: 10
-
     },
+
     buttonContainer: {
         backgroundColor: "#3C6435",
         // position: 'absolute',
@@ -49,9 +47,6 @@ const styles = StyleSheet.create({
         // //marginTop: '170%',
         paddingVertical: 15
         // //marginBottom: '10%'
-        
-
-
     },
 
     buttonText:{
@@ -59,5 +54,4 @@ const styles = StyleSheet.create({
         color : '#FFFFFF',
         fontWeight: '600',
     }
-
 });

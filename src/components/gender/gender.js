@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     justifyContent: 'center'
    },
+
    title : {
       color: '#fff',
       marginTop: 10,
@@ -35,7 +36,4 @@ const styles = StyleSheet.create({
       opacity: 0.5,
 
    }
-
-
-
 });

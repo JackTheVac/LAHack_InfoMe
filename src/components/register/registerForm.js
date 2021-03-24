@@ -3,7 +3,6 @@ import {StyleSheet, View, TextInput, TouchableOpacity, Text, Button} from 'react
 import * as firebase from 'firebase';
 
 export default class RegisterForm extends Component {
-
     constructor(props){
         super(props)
         this.state = ({
@@ -36,7 +35,6 @@ export default class RegisterForm extends Component {
 
     render() {
         return (
-          
             <View style = {styles.container}>
                 <TextInput 
                     placeholder = "Email"
@@ -69,33 +67,32 @@ export default class RegisterForm extends Component {
                     style = {styles.input}
                 />
 
-            <Button //touchable opacity styling?
+                <Button //touchable opacity styling?
                     style = {styles.buttonContainer}
                     title = "REGISTER"
                     color = "#3C6435"
                     onPress={()=> this.registerAcc(this.state.email, this.state.password, this.state.confirmPass)} >
                     <Text style = {styles.buttonText}>LOGIN</Text>
                 </Button>
-            
             </View>
-
-
         );
     }
 }
+
 
 const styles = StyleSheet.create({
     container: {
         padding: 20,
     },
+
     input: {
         height: 40,
         backgroundColor: '#C5E3C6',
         marginBottom: 20,
         color: '#000000',
         paddingHorizontal: 10
-
     },
+
     buttonContainer: {
         backgroundColor: '#3C6435',
         paddingVertical: 15,
@@ -106,5 +103,4 @@ const styles = StyleSheet.create({
         color : '#FFFFFF',
         fontWeight: '600',
     }
-
 });

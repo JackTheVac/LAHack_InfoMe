@@ -1,6 +1,8 @@
 import React, { Component} from 'react';
 import {StyleSheet, View, Image, Text, KeyboardAvoidingView} from 'react-native';
 import RegAddressForm from './regAddressForm';
+import './src/config/global.js'
+
 
 export default class RegAddress extends Component {
     render(){

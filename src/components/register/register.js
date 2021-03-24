@@ -2,6 +2,7 @@ import { styleSheets } from 'min-document';
 import React, { Component} from 'react';
 import {StyleSheet, View, Image, Text, KeyboardAvoidingView} from 'react-native';
 import RegisterForm from './registerForm';
+import './src/config/global.js'
 
 export default class Register extends Component {
     render(){
