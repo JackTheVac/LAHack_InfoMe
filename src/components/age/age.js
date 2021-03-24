@@ -1,6 +1,6 @@
 import { styleSheets } from 'min-document';
 import React, { Component} from 'react';
-import {StyleSheet, View, Image, Text, KeyboardAvoidingView} from 'react-native';
+import {StyleSheet, View, Image, Text, KeyboardAvoidingView, Button} from 'react-native';
 import AgeForm from './ageForm';
 import '../../config/global.js'
 
@@ -10,6 +10,12 @@ export default class Age extends Component {
             <KeyboardAvoidingView behavior = "padding" style = {styles.container}>
                 <View style = {styles.formContainer}>
                     <AgeForm />
+                    <Button
+                    //style = {styles.buttonContainer}
+                    title = "Next"
+                    color = "#3C6435"
+                    onPress={() => this.props.navigation.navigate('Address')}
+            />
                 </View>
             </KeyboardAvoidingView>
         );

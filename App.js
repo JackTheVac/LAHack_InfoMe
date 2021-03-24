@@ -32,7 +32,8 @@ const AppStackNavigator = createStackNavigator(
   Register: Register,
   Name: Name,
   Gender: Gender,
-  Age: Age
+  Age: Age,
+  Address: RegAddress
 },
 {
   initialRouteName: 'Login'
