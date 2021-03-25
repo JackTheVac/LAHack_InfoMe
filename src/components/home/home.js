@@ -148,6 +148,9 @@ const { width } = Dimensions.get('window');
                          <Text>
                             Hi I am Sun
                          </Text>
+                         <Text>
+                             I like pie
+                         </Text>
                         </Animated.View>
 
                         <Animated.View style={{justifyContent: 'center', alignItems: 'center', transform: [{
@@ -160,6 +163,9 @@ const { width } = Dimensions.get('window');
                         }}>
                          <Text>
                             Hi I am Moon
+                         </Text>
+                         <Text>
+                            I like cake
                          </Text>
                      </Animated.View>
                  </ScrollView>
