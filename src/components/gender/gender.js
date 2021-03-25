@@ -2,7 +2,7 @@ import { styleSheets } from 'min-document';
 import React, { Component} from 'react';
 import {StyleSheet, View, Image, Text, KeyboardAvoidingView, Button, TextInput} from 'react-native';
 import GenderForm from './genderForm';
-import '../../config/global.js'
+import {db} from '../../config/global.js'
 import * as firebase from 'firebase';
 
 export default class Gender extends Component {
@@ -14,7 +14,7 @@ export default class Gender extends Component {
     }
 
     recordGender = (gender) => {
-        firebase.firestore().collection(user.email).doc("userInfo").set({
+        db.collection(user.email).doc("userInfo").set({
             genderID: gender},
             { merge: true });
         this.props.navigation.navigate('Age');

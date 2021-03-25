@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import './src/config/global.js'
+import {init, db} from "./src/config/global";
 
 
 import Login from './src/components/login/login'
@@ -18,16 +18,10 @@ import { render } from 'react-dom';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation'
 
+
 const AppColor = "#C1CBFC";
 
 
-// export default class App extends Component {
-//   render() {
-//     return (
-//       <AppStackNavigator />
-//     );
-//   }
-// }
 const AppStackNavigator = createStackNavigator(
 {
   Login: Login,
@@ -61,6 +55,23 @@ const AppStackNavigator = createStackNavigator(
 const TempApp = createAppContainer(AppStackNavigator);
 
 export default class App extends Component {
+  componentDidMount(){
+    console.log("hello", "edawdwa");
+
+    init();
+
+    console.log(db);
+
+    db.collection('47@time.com').doc('userInfo').get().then(doc => {
+      console.log(doc.data().nameID);
+     })
+
+
+  }
+
+
+
+
   render() {
     return (
 

@@ -2,8 +2,7 @@ import { styleSheets } from 'min-document';
 import React, { Component} from 'react';
 import {StyleSheet, View, Image, Text, KeyboardAvoidingView, Button, TouchableOpacity, Touchable, TextInput} from 'react-native';
 import NameForm from './nameForm';
-import '../../config/global.js'
-import * as firebase from 'firebase';
+import {db} from '../../config/global.js'
 
 export default class Name extends Component {
     constructor(props){
@@ -15,7 +14,7 @@ export default class Name extends Component {
     }
 
     recordName = (recname, recnickname) => {
-        firebase.firestore().collection(user.email).doc("userInfo").set({
+        db.collection(user.email).doc("userInfo").set({
             nameID: recname,
             nicknameID: recnickname},
             { merge: true });

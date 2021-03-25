@@ -1,6 +1,13 @@
-import * as firebase from 'firebase';
+import firebase from 'firebase';
+import 'firebase/firestore'
+import 'firebase/auth'
 
-const firebaseConfig = {
+let db;
+
+
+function init() {
+
+  const firebaseConfig = {
     apiKey: "AIzaSyAWFzFXweu4VL9uImTO-OQQTtoVvPfg9rA",
     authDomain: "infome-31dd7.firebaseapp.com",
     databaseURL: "https://infome-31dd7-default-rtdb.firebaseio.com",
@@ -11,16 +18,28 @@ const firebaseConfig = {
     measurementId: "G-TYLD1V2QHR"
 };
 
+
 firebase.initializeApp(firebaseConfig);
 
-const userdata = firebase.firestore();
-
-global.userdata = userdata;
-
-global.user = firebase.auth().currentUser;
+db = firebase.firestore();
 
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     global.user = firebase.auth().currentUser;
   }
 });
+
+}
+
+
+//global.userdata = userdata;
+
+//global.user = firebase.auth().currentUser;
+
+// firebase.auth().onAuthStateChanged(function(user) {
+//   if (user) {
+//     global.user = firebase.auth().currentUser;
+//   }
+// });
+
+export {init, db}

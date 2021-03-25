@@ -4,6 +4,17 @@ import {StyleSheet, View, Image, Text, KeyboardAvoidingView, Button} from 'react
 import LoginForm from './loginForm';
 import '../../config/global.js'
 
+
+//import firestore from './react-native-firebase/firestore';
+
+// const users = await firestore
+//   .collection('Users')
+//   .get();
+// const user = await firestore()
+//   .collection('Users')
+//   .doc('ABC')
+//   .get();
+
 const BGCforAPP = '#C3FDCB'
 
 export default class Login extends Component {

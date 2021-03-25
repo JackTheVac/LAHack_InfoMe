@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import {StyleSheet, View, TextInput, TouchableOpacity, Text, Button} from 'react-native';
 //import { dimensions }
-import * as firebase from 'firebase';
+import {db} from "../../config/global"
+
+
 
 //consider not constant if publishing app for logging out function
 
@@ -16,7 +18,7 @@ export default class GenderForm extends Component {
 
     recordGender = (gender) => {
         //NOTE this adds to firebase data collection for thegamerguy321@gmail.com
-        firebase.firestore().collection("bk51SvrRN7eFslolmPi0Ck5IlCy1").doc("userInfo").set({
+        db.collection("bk51SvrRN7eFslolmPi0Ck5IlCy1").doc("userInfo").set({
             genderID: gender
         })
     }
