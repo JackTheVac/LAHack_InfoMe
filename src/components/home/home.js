@@ -7,8 +7,8 @@ const { width } = Dimensions.get('window');
  export default class Home extends Component {
       state = {
           active: 0,
-          xTabOne: 0, //x co-ordinate of tab one
-          xTabTwo: 0, //x co-ordinate of tab two
+          xTabOne: 0,
+          xTabTwo: 0, 
           translateX: new Animated.Value(0),
           translateXTabOne: new Animated.Value(0),
           translateXTabTwo: new Animated.Value(width),
