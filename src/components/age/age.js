@@ -2,7 +2,7 @@ import { styleSheets } from 'min-document';
 import React, { Component} from 'react';
 import {StyleSheet, View, Image, Text, KeyboardAvoidingView, Button, TextInput} from 'react-native';
 import AgeForm from './ageForm';
-import '../../config/global.js'
+import {db} from '../../config/global.js'
 import * as firebase from 'firebase';
 
 export default class Age extends Component {
@@ -13,7 +13,7 @@ export default class Age extends Component {
         })
     }
     recordAge = (age) => {
-        firebase.firestore().collection(user.email).doc("userInfo").set({
+        db.collection(user.email).doc("userInfo").set({
             ageID: age},
             { merge: true });
         this.props.navigation.navigate('Occupation');
