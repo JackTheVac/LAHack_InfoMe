@@ -5,7 +5,7 @@ import {StyleSheet, View, TextInput, TouchableOpacity, Text} from 'react-native'
 export default class OccupationForm extends Component {
     render() {
         return (
-            <View style = {styles.container}>
+            <View style = {styles.formContainer}>
                 <TextInput 
                     placeholder = "Enter Occupation/Job"
                     returnKeyType = "next"
@@ -22,9 +22,9 @@ export default class OccupationForm extends Component {
                     autoCorrect = {false}
                 />
 
-                <TouchableOpacity style = {styles.buttonContainer}>
+                {/* <TouchableOpacity style = {styles.buttonContainer}>
                     <Text style = {styles.buttonText}>NEXT</Text>
-                </TouchableOpacity>
+                </TouchableOpacity> */}
             </View>
         );
     }
@@ -32,7 +32,7 @@ export default class OccupationForm extends Component {
 
 
 const styles = StyleSheet.create({
-    container: {
+    formContainer: {
         padding: 20,
     },
 

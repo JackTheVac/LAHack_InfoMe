@@ -9,6 +9,12 @@ export default class Occupation extends Component {
              <KeyboardAvoidingView behavior = "padding" style = {styles.container}>
                 <View style = {styles.formContainer}>
                     <OccupationForm/>
+                    <Button
+                    //style = {styles.buttonContainer}
+                    title = "Next"
+                    color = "#3C6435"
+                    onPress={() => this.props.navigation.navigate('Address')}
+            />
                 </View>
 
 
@@ -22,7 +28,7 @@ export default class Occupation extends Component {
  const styles = StyleSheet.create({
     container:{
         flex: 1,
-        backgroundColor: '#C3FDCB',
+        backgroundColor: '#7CC480',
     },
  
    
