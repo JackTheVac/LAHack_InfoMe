@@ -64,9 +64,13 @@ export default class App extends Component {
 
     console.log(db);
 
-    db.collection('userInfo').doc(user.email).get().then(doc => {
-      console.log(doc.data().nameID);
-     })
+    // db.collection('userInfo').doc(user.email).get().then(doc => {
+    //   console.log(doc.data().nameID);
+    //  })
+    
+    // db.collection('userInfo').doc(user.email).get().then(doc => {
+    //   console.log(doc.data().nameID);
+    //  })
 
 
   }

@@ -1,8 +1,13 @@
 import { styleSheets } from 'min-document';
 import React, { Component} from 'react';
 import {StyleSheet, View, Image, Text, KeyboardAvoidingView, Button, TouchableOpacity, Animated, Touchable, ScrollView, Dimensions} from 'react-native';
+import '../../config/global.js';
+import {db} from '../../config/global.js';
 
 const { width } = Dimensions.get('window');
+
+
+
 
  export default class Home extends Component {
       state = {
@@ -14,6 +19,19 @@ const { width } = Dimensions.get('window');
           translateXTabTwo: new Animated.Value(width),
           translateY: -1000
       };
+
+      //testing
+      componentDidMount(){
+
+        console.log(db);
+    
+        db.collection('userInfo').doc(user.email).get().then(doc => {
+          console.log(doc.data().nameID);
+         })
+    
+    
+      }
+      // end testing
 
       handleSlide = type => {
           let { active, xTabOne, xTabTwo, translateX, translateXTabOne, translateXTabTwo } = this.state;

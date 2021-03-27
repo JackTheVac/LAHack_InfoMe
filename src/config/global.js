@@ -23,6 +23,7 @@ firebase.initializeApp(firebaseConfig);
 
 db = firebase.firestore();
 
+
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     global.user = firebase.auth().currentUser;
