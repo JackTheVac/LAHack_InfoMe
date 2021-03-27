@@ -14,14 +14,14 @@ export default class NPW extends Component {
 
         npArray.push(
 
-        <View style = {styles.boxContainer}>
+        <TouchableOpacity onPress={() => alert('Harchet is Brown')} style = {styles.boxContainer}>
             <View>
                 <Text style = {styles.text}>
                     Name: Jack{"\n"}Gender: Jack{"\n"}Age: 19{"\n"}Occupation: Student{"\n"}City: Chino Hills
                     
                 </Text>
             </View>
-        </View>
+        </TouchableOpacity>
         );
 
         }
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     boxContainer:{
         justifyContent: "center",
         height: 200,
-        width: 350,
+        width: 325,
         backgroundColor: "#E2E6FC", 
         borderRadius:  20 ,
         alignSelf: 'center'  , 
