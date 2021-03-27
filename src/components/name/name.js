@@ -14,7 +14,7 @@ export default class Name extends Component {
     }
 
     recordName = (recname, recnickname) => {
-        db.collection(user.email).doc("userInfo").set({
+        db.doc(user.email).set({
             nameID: recname,
             nicknameID: recnickname},
             { merge: true });

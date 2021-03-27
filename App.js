@@ -63,12 +63,12 @@ export default class App extends Component {
     init();
 
     console.log(db);
-
-    db.collection('47@time.com').doc('userInfo').get().then(doc => {
+/*
+    db.doc('47@time.com').get().then(doc => {
       console.log(doc.data().nameID);
      })
 
-
+*/
   }
 
 

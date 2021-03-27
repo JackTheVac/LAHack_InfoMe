@@ -14,7 +14,7 @@ export default class Gender extends Component {
     }
 
     recordGender = (gender) => {
-        db.collection(user.email).doc("userInfo").set({
+        db.doc(user.email).set({
             genderID: gender},
             { merge: true });
         this.props.navigation.navigate('Age');

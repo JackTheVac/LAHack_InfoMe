@@ -13,7 +13,7 @@ export default class Age extends Component {
         })
     }
     recordAge = (age) => {
-        db.collection(user.email).doc("userInfo").set({
+        db.doc(user.email).set({
             ageID: age},
             { merge: true });
         
