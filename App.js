@@ -57,29 +57,13 @@ const AppStackNavigator = createStackNavigator(
 const TempApp = createAppContainer(AppStackNavigator);
 
 export default class App extends Component {
-  componentDidMount(){
-    // console.log("hello", "edawdwa");
-    init();
-
-    console.log(db);
-
-    // db.collection('userInfo').doc(user.email).get().then(doc => {
-    //   console.log(doc.data().nameID);
-    //  })
-    
-    // db.collection('userInfo').doc(user.email).get().then(doc => {
-    //   console.log(doc.data().nameID);
-    //  })
-
-
-  }
+    componentDidMount(){
+        init();
+    }
 
   render() {
     return (
-
       <TempApp/>
-     
-   
     );
   }
 }
