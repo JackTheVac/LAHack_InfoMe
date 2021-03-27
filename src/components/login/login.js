@@ -32,12 +32,18 @@ export default class Login extends Component {
             firebase.auth().signInWithEmailAndPassword(email,password).then(function(user){
                 console.log(user)
                 })
-                this.props.navigation.navigate('Home')
+            navigateAway()
         }
         catch(error){
-            console.log(error.toString())
+            //console.log(error.toString())
+            alert("This user does not exist. Check your information and try again.")
         }
     }
+
+    navigateAway = () => {
+        this.props.navigation.navigate('Home')
+    }
+
    render(){
        return (
        <KeyboardAvoidingView behavior = "padding" style = {styles.container}>
