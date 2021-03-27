@@ -21,7 +21,7 @@ function init() {
 
 firebase.initializeApp(firebaseConfig);
 
-db = firebase.firestore();
+db = firebase.firestore().collection("userInfo");
 
 
 firebase.auth().onAuthStateChanged(function(user) {

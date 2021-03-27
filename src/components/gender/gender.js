@@ -9,13 +9,15 @@ export default class Gender extends Component {
     constructor(props){
         super(props)
         this.state = ({
-            gender:''
+            gender:'',
+            pronouns:''
         })
     }
 
-    recordGender = (gender) => {
-        db.collection(user.email).doc("userInfo").set({
-            genderID: gender},
+    recordGender = (gender, pronouns) => {
+        db.doc(user.email).set({
+            genderID: gender,
+            pronounsID: pronouns},
             { merge: true });
         this.props.navigation.navigate('Age');
     }
@@ -29,7 +31,6 @@ export default class Gender extends Component {
                         placeholder = "Gender (i.e. Male, Female, Trans, Other, etc.)"
                         returnKeyType = "next"
                         onChangeText={(gender)=>this.setState({gender})}
-                        //ref={(input) => this.preferredGenderInput = input}
                         style = {styles.input}
                         autoCapitalize = "words"
                         autoCorrect = {false}
@@ -37,20 +38,19 @@ export default class Gender extends Component {
                         <TextInput
                         placeholder = "Pronoun (i.e. He/Him/His, She/Her/Hers, They/Them/Their)"
                         returnKeyType = "go"
-                        //onChangeText={(gender)=>this.setState({gender})}
-                        //ref={(input) => this.preferredGenderInput = input}
+                        onChangeText={(pronouns)=>this.setState({pronouns})}
                         style = {styles.input}
                         autoCapitalize = "words"
                         autoCorrect = {false}
-                />
+                        />
                     </View>
 
                     <View style={{ borderRadius:  20 ,width:  200, height:  50, alignSelf: 'center'  , marginBottom:  20, backgroundColor:  'white' , borderWidth:  2, justifyContent:  'center', textAlign:  'center', margin:  10}}>
-                        <Button //touchable opacity styling?
+                        <Button
                         style = {styles.buttonContainer}
                         title = "Next"
                         color = "#3C6435"
-                        onPress={()=> this.recordGender(this.state.gender)}
+                        onPress={()=> this.recordGender(this.state.gender, this.state.pronouns)}
                         />
                     </View>
                 </View>
@@ -80,14 +80,7 @@ const styles = StyleSheet.create({
     },
     buttonContainer: {
         backgroundColor: "#3C6435",
-        // position: 'absolute',
-        // margin: 16,
-        // right: 10,
-        // bottom: 10,
-        // //left: 0,
-        // //marginTop: '170%',
         paddingVertical: 15
-        // //marginBottom: '10%'
     },
      textFormContainer: {
              padding: 20,

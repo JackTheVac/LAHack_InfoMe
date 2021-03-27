@@ -59,7 +59,6 @@ const TempApp = createAppContainer(AppStackNavigator);
 export default class App extends Component {
   componentDidMount(){
     // console.log("hello", "edawdwa");
-
     init();
 
     console.log(db);
@@ -74,9 +73,6 @@ export default class App extends Component {
 
 
   }
-
-
-
 
   render() {
     return (
