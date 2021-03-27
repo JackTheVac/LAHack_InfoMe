@@ -6,7 +6,7 @@ const { width } = Dimensions.get('window');
 
 
 
-export default class UPW extends Component {
+export default class NPW extends Component {
 
 render(){
     return(

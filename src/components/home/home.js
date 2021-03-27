@@ -3,6 +3,7 @@ import React, { Component} from 'react';
 import {StyleSheet, View, Image, Text, KeyboardAvoidingView, Button, TouchableOpacity, Animated, Touchable, ScrollView, Dimensions} from 'react-native';
 import '../../config/global.js';
 import {db} from '../../config/global.js';
+import UPW from '../home/userProfileWidget'
 
 const { width } = Dimensions.get('window');
 
@@ -22,16 +23,16 @@ const { width } = Dimensions.get('window');
               name: ""
           }
       }
-      constructor(props) {
-        super(props);
-        db.doc(user.email).get().then(doc => {
-            console.log(doc.data().nameID);
-            this.state = {name: doc.data().nameID}
+    //   constructor(props) {
+    //     super(props);
+    //     db.doc(user.email).get().then(doc => {
+    //         console.log(doc.data().nameID);
+    //         this.state = {name: doc.data().nameID}
             
-           })
+    //        })
         
 
-      }
+    //   }
 
       /*testing
       componentDidMount(){
@@ -181,12 +182,8 @@ const { width } = Dimensions.get('window');
                         }}
                         onLayout={event => this.setState({translateY: event.nativeEvent.layout.height})}
                         >
-                         <Text>
-                            {this.state.userEmail.name}
-                         </Text>
-                         <Text>
-                            {this.state.userEmail.name}
-                         </Text>
+                        <UPW/>
+
                         </Animated.View>
 
                         <Animated.View style={{justifyContent: 'center', alignItems: 'center', transform: [{
@@ -230,6 +227,8 @@ const { width } = Dimensions.get('window');
        textAlign: 'center',
        opacity: 0.5,
 
-    }
+    },
+
+
  });
 
