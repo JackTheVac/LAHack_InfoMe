@@ -28,8 +28,17 @@ export default class GenderForm extends Component {
             <View style = {styles.textFormContainer}>
                 <TextInput
                     placeholder = "Gender (i.e. Male, Female, Trans, Other, etc.)"
-                    returnKeyType = "go"
+                    returnKeyType = "next"
                     onChangeText={(gender)=>this.setState({gender})}
+                    //ref={(input) => this.preferredGenderInput = input}
+                    style = {styles.input}
+                    autoCapitalize = "none"
+                    autoCorrect = {false}
+                />
+                <TextInput
+                    placeholder = "Pronoun (i.e. He/Him/His, She/Her/Hers, They/Them/Their"
+                    returnKeyType = "go"
+                    //onChangeText={(gender)=>this.setState({gender})}
                     //ref={(input) => this.preferredGenderInput = input}
                     style = {styles.input}
                     autoCapitalize = "none"
