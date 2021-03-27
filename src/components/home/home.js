@@ -17,21 +17,39 @@ const { width } = Dimensions.get('window');
           translateX: new Animated.Value(0),
           translateXTabOne: new Animated.Value(0),
           translateXTabTwo: new Animated.Value(width),
-          translateY: -1000
-      };
+          translateY: -1000,
+          userEmail: {
+              name: ""
+          }
+      }
+      constructor(props) {
+        super(props);
+        db.collection('userInfo').doc(user.email).get().then(doc => {
+            console.log(doc.data().nameID);
+            this.state = {name: doc.data().nameID}
+            
+           })
+        
 
-      //testing
+      }
+
+      /*testing
       componentDidMount(){
 
         console.log(db);
     
         db.collection('userInfo').doc(user.email).get().then(doc => {
           console.log(doc.data().nameID);
+          this.setState({
+              userEmail{
+                  name: doc.data().nameID
+              }
+          })
          })
     
     
       }
-      // end testing
+       end testing */
 
       handleSlide = type => {
           let { active, xTabOne, xTabTwo, translateX, translateXTabOne, translateXTabTwo } = this.state;
@@ -164,10 +182,10 @@ const { width } = Dimensions.get('window');
                         onLayout={event => this.setState({translateY: event.nativeEvent.layout.height})}
                         >
                          <Text>
-                            Hi I am Sun
+                            {this.state.user.name}
                          </Text>
                          <Text>
-                             I like pie
+                            {this.state.user.name}
                          </Text>
                         </Animated.View>
 
@@ -180,10 +198,10 @@ const { width } = Dimensions.get('window');
                     ]
                         }}>
                          <Text>
-                            Hi I am Moon
+                         {this.state.user.name}
                          </Text>
                          <Text>
-                            I like cake
+                         {this.state.user.name}
                          </Text>
                      </Animated.View>
                  </ScrollView>
