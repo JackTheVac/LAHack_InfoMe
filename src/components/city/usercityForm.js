@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import {StyleSheet, View, TextInput, TouchableOpacity, Text} from 'react-native';
 
 
-export default class RegAddressForm extends Component {
+export default class UserCityForm extends Component {
     render() {
         return (
             <View style = {styles.container}>
                 <TextInput 
-                    placeholder = "Enter Address (Optional)"
+                    placeholder = "Enter your home city"
                     returnKeyType = "next"
                     style = {styles.input}
                     autoCapitalize = "none"

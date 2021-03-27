@@ -7,8 +7,8 @@ import {init, db} from "./src/config/global";
 import Login from './src/components/login/login'
 import loginForm from './src/components/login/loginForm'
 import Register from './src/components/register/register'
-import RegisterForm from './src/components/register/registerForm'
-import RegAddress from './src/components/regAddress/regAddress'
+//import UserCityForm from './src/components/register/registerForm'
+import UserCity from './src/components/city/usercity'
 import Name from './src/components/name/name'
 import Occupation from './src/components/occupation/occupation'
 import AddInfo from './src/components/addInfo/addInfo'
@@ -30,7 +30,7 @@ const AppStackNavigator = createStackNavigator(
   Name: {screen: Name, navigationOptions: {headerLeft: () => null}},
   Gender: {screen: Gender, navigationOptions: {}},
   Age: {screen: Age, navigationOptions: {headerLeft: () => null}},
-  //Address: {screen: RegAddress, navigationOptions: {}},
+  City: {screen: UserCity, navigationOptions: {}},
   Occupation: {screen: Occupation, navigationOptions: {}},
   Home: {screen: Home, navigationOptions: {headerLeft: () => null}}
 

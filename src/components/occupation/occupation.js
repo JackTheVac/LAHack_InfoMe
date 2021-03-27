@@ -12,9 +12,9 @@ export default class Occupation extends Component {
                     <View style={{ borderRadius:  20 ,width:  120, height:  50, alignSelf: 'center'  , marginBottom:  20, backgroundColor:  'white' , borderWidth:  2, justifyContent:  'center', textAlign:  'center', margin:  10}}>
                     <Button
                     //style = {styles.buttonContainer}
-                    title = "Finish"
+                    title = "Next"
                     color = "#3C6435"
-                    onPress={() => this.props.navigation.navigate('Home')}
+                    onPress={() => this.props.navigation.navigate('City')}
             />
                     </View>
                     
