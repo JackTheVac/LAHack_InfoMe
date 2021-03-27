@@ -33,7 +33,7 @@ export default class Name extends Component {
                         //onSubmitEditing = { () => this.preferredNameInput.focus()}
                         onChangeText={(name)=>this.setState({name})}
                         style = {styles.input}
-                        autoCapitalize = "none"
+                        autoCapitalize = "words"
                         autoCorrect = {false}
                     />
 

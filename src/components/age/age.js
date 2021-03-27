@@ -34,6 +34,7 @@ export default class Age extends Component {
                             style = {styles.input}
                             autoCapitalize = "none"
                             autoCorrect = {false}
+                            keyboardType="numeric"
                         />
                     </View>
                     <View style={{ borderRadius:  20 ,width:  120, height:  50, alignSelf: 'center'  , marginBottom:  20, backgroundColor:  'white' , borderWidth:  2, justifyContent:  'center', textAlign:  'center', margin:  10}}>

@@ -31,7 +31,7 @@ export default class Gender extends Component {
                         onChangeText={(gender)=>this.setState({gender})}
                         //ref={(input) => this.preferredGenderInput = input}
                         style = {styles.input}
-                        autoCapitalize = "none"
+                        autoCapitalize = "words"
                         autoCorrect = {false}
                         />
                     </View>
