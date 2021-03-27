@@ -8,10 +8,12 @@ const { width } = Dimensions.get('window');
 
 export default class NPW extends Component {
 
-render(){
-    return(
+    makeBoxes = () => {
+        let npArray = [];
+        for (let i=0; i<3; i++) {
 
-        
+        npArray.push(
+
         <View style = {styles.boxContainer}>
             <View>
                 <Text style = {styles.text}>
@@ -19,20 +21,26 @@ render(){
                     
                 </Text>
             </View>
+        </View>
+        );
 
+        }
+        return npArray
+    }
 
-
+render(){
+    return(
+        
+        <View>
+            {this.makeBoxes()}
         </View>
         
+        
 
-        
-        
 
     );
 }
   
-
-
 }
 
 

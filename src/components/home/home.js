@@ -3,7 +3,8 @@ import React, { Component} from 'react';
 import {StyleSheet, View, Image, Text, KeyboardAvoidingView, Button, TouchableOpacity, Animated, Touchable, ScrollView, Dimensions} from 'react-native';
 import '../../config/global.js';
 import {db} from '../../config/global.js';
-import UPW from '../home/userProfileWidget'
+import UPW from './userProfileWidget'
+import NPW from './neighborProfileWidget'
 
 const { width } = Dimensions.get('window');
 
@@ -194,6 +195,8 @@ const { width } = Dimensions.get('window');
                     }
                     ]
                         }}>
+
+                           <NPW/> 
                          <Text>
                          {this.state.userEmail.name}
                          </Text>
