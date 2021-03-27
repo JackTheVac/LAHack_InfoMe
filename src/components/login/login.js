@@ -29,12 +29,12 @@ export default class Login extends Component {
 
     loginUser = (email,password) =>{
         try{
-            firebase.auth().signInWithEmailAndPassword(email,password).then(this.props.navigation.navigate('Home')
-                )
+            firebase.auth().signInWithEmailAndPassword(email,password).then(function(user){
+                console.log(user)})
+                this.props.navigation.navigate('Home')
         }
         catch(error){
-            //console.log(error.toString())
-            alert("This user does not exist. Check your information and try again.")
+            console.log(error.toString())
         }
     }
 
