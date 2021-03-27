@@ -24,7 +24,7 @@ const { width } = Dimensions.get('window');
       }
       constructor(props) {
         super(props);
-        db.collection('userInfo').doc(user.email).get().then(doc => {
+        db.doc(user.email).get().then(doc => {
             console.log(doc.data().nameID);
             this.state = {name: doc.data().nameID}
             
@@ -182,10 +182,10 @@ const { width } = Dimensions.get('window');
                         onLayout={event => this.setState({translateY: event.nativeEvent.layout.height})}
                         >
                          <Text>
-                            {this.state.user.name}
+                            {this.state.userEmail.name}
                          </Text>
                          <Text>
-                            {this.state.user.name}
+                            {this.state.userEmail.name}
                          </Text>
                         </Animated.View>
 
@@ -198,10 +198,10 @@ const { width } = Dimensions.get('window');
                     ]
                         }}>
                          <Text>
-                         {this.state.user.name}
+                         {this.state.userEmail.name}
                          </Text>
                          <Text>
-                         {this.state.user.name}
+                         {this.state.userEmail.name}
                          </Text>
                      </Animated.View>
                  </ScrollView>
