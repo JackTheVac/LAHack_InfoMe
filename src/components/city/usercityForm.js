@@ -5,7 +5,7 @@ import {StyleSheet, View, TextInput, TouchableOpacity, Text} from 'react-native'
 export default class UserCityForm extends Component {
     render() {
         return (
-            <View style = {styles.container}>
+            <View style = {styles.formContainer}>
                 <TextInput 
                     placeholder = "Enter your home city"
                     returnKeyType = "next"
@@ -24,7 +24,7 @@ export default class UserCityForm extends Component {
 
 
 const styles = StyleSheet.create({
-    container: {
+    formContainer: {
         padding: 20,
     },
 

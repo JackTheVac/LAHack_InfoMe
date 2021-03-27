@@ -59,20 +59,12 @@ const TempApp = createAppContainer(AppStackNavigator);
 export default class App extends Component {
   componentDidMount(){
     // console.log("hello", "edawdwa");
-
     init();
-
-    console.log(db);
-
+    /*console.log(db);
     db.collection('47@time.com').doc('userInfo').get().then(doc => {
       console.log(doc.data().nameID);
-     })
-
-
+     })*/
   }
-
-
-
 
   render() {
     return (
