@@ -64,7 +64,7 @@ export default class App extends Component {
 
     console.log(db);
 
-    db.collection('47@time.com').doc('userInfo').get().then(doc => {
+    db.collection('userInfo').doc(user.email).get().then(doc => {
       console.log(doc.data().nameID);
      })
 
