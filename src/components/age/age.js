@@ -16,7 +16,10 @@ export default class Age extends Component {
         db.collection(user.email).doc("userInfo").set({
             ageID: age},
             { merge: true });
+        
         this.props.navigation.navigate('Occupation');
+        console.log("HERE!")
+        
     }
     render(){
         return (
@@ -72,7 +75,7 @@ const styles = StyleSheet.create({
 
     input: {
         height: 40,
-        backgroundColor: '#C5E3C6',
+        backgroundColor: 'white',
         marginBottom: 20,
         color: '#000000',
         paddingHorizontal: 10

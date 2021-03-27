@@ -57,7 +57,7 @@ const { width } = Dimensions.get('window');
           translateY
           } = this.state;
      return (
-         <View style={{ flex: 1 }}>
+         <View style={{ flex: 1, backgroundColor: '#C3FDCB'}}>
              <View
                  style={{
                      width: "90%",
@@ -179,7 +179,7 @@ const { width } = Dimensions.get('window');
  const styles = StyleSheet.create({
     container:{
         flex: 1,
-        backgroundColor: '#7CC480',
+        backgroundColor: '#C3FDCB',
     },
 
     logoContainer : {

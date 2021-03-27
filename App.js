@@ -30,9 +30,10 @@ const AppStackNavigator = createStackNavigator(
   Name: {screen: Name, navigationOptions: {headerLeft: () => null}},
   Gender: {screen: Gender, navigationOptions: {}},
   Age: {screen: Age, navigationOptions: {headerLeft: () => null}},
-  Address: {screen: RegAddress, navigationOptions: {}},
+  //Address: {screen: RegAddress, navigationOptions: {}},
   Occupation: {screen: Occupation, navigationOptions: {}},
   Home: {screen: Home, navigationOptions: {headerLeft: () => null}}
+
 },
 {
   initialRouteName: 'Login',
@@ -57,7 +58,7 @@ const TempApp = createAppContainer(AppStackNavigator);
 
 export default class App extends Component {
   componentDidMount(){
-    console.log("hello", "edawdwa");
+    // console.log("hello", "edawdwa");
 
     init();
 
