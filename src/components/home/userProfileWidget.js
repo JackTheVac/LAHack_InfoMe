@@ -12,7 +12,7 @@ export default class UPW extends Component {
         name: '',
         gender:'',
         age:'',
-        occupation:'',
+        pronouns:'',
         city:''}
     }
     constructor(props) {
@@ -23,7 +23,7 @@ export default class UPW extends Component {
             name: doc.data().nameID,
             gender: doc.data().genderID,
             age: doc.data().ageID,
-            occupation: doc.data().occupationID,
+            pronouns: doc.data().pronounsID,
             city: doc.data().cityID
             }})
         })
@@ -38,7 +38,7 @@ render(){
         <TouchableOpacity onPress={() => alert('Easter Egg!')} style = {styles.boxContainer}>
             <View > 
                 <Text style = {styles.textLeft}>
-                    Name: {this.state.userEmail.name}{"\n"}Gender: {this.state.userEmail.gender} {"\n"}Age: {this.state.userEmail.age}{"\n"}Occupation: {this.state.userEmail.occupation}{"\n"}City:{this.state.userEmail.city}
+                    Name: {this.state.userEmail.name}{"\n"}Gender: {this.state.userEmail.gender} {"\n"}Age: {this.state.userEmail.age}{"\n"}Pronouns: {this.state.userEmail.pronouns}{"\n"}City:{this.state.userEmail.city}
                     
                 </Text>
             </View>

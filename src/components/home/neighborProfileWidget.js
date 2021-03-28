@@ -10,21 +10,58 @@ export default class NPW extends Component {
 
     makeBoxes = () => {
         let npArray = [];
-        for (let i=0; i<3; i++) {
+        
 
         npArray.push(
 
         <TouchableOpacity onPress={() => alert('Easter Egg!')} style = {styles.boxContainer}>
             <View>
                 <Text style = {styles.text}>
-                    Name: Jack{"\n"}Gender: Jack{"\n"}Age: 19{"\n"}Occupation: Student{"\n"}City: Chino Hills
+                    Name: Jack{"\n"}Gender: Male{"\n"}Age: 19{"\n"}Pronouns: He/Him{"\n"}City: Chino Hills
                     
                 </Text>
             </View>
         </TouchableOpacity>
         );
 
-        }
+        npArray.push(
+
+            <TouchableOpacity onPress={() => alert('Easter Egg!')} style = {styles.boxContainer}>
+                <View>
+                    <Text style = {styles.text}>
+                        Name: Harchet{"\n"}Gender: Male{"\n"}Age: 18{"\n"}Pronouns: He/Him{"\n"}City: Chino Hills
+                        
+                    </Text>
+                </View>
+            </TouchableOpacity>
+            );
+
+            
+            npArray.push(
+
+                <TouchableOpacity onPress={() => alert('Easter Egg!')} style = {styles.boxContainer}>
+                    <View>
+                        <Text style = {styles.text}>
+                            Name: Ricky{"\n"}Gender: Male{"\n"}Age: 19{"\n"}Pronouns: He/Him{"\n"}City: Chino Hills
+                            
+                        </Text>
+                    </View>
+                </TouchableOpacity>
+                );
+        
+            npArray.push(
+
+                    <TouchableOpacity onPress={() => alert('Easter Egg!')} style = {styles.boxContainer}>
+                        <View>
+                            <Text style = {styles.text}>
+                                Name: Sun{"\n"}Gender: Male{"\n"}Age: 19{"\n"}Pronouns: He/Him{"\n"}City: Chino Hills
+                                
+                            </Text>
+                        </View>
+                    </TouchableOpacity>
+                    );
+            
+        
         return npArray
     }
 
