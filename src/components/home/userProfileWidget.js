@@ -15,47 +15,31 @@ export default class UPW extends Component {
         pronouns:'',
         city:''}
     }
-    constructor(props) {
-        super(props);
-        db.doc(user.email).get().then(doc => {
-            console.log(doc.data().nameID);
-            this.setState({userEmail: {
-            name: doc.data().nameID,
-            gender: doc.data().genderID,
-            age: doc.data().ageID,
-            pronouns: doc.data().pronounsID,
-            city: doc.data().cityID
-            }})
-        })
-    }
-       // console.log(this.state.userEmail.name)
+   constructor(props) {
+       super(props);
+       db.doc(user.email).get().then(doc => {
+           console.log(doc.data().nameID);
+           this.setState({userEmail: {
+           name: doc.data().nameID,
+           gender: doc.data().genderID,
+           age: doc.data().ageID,
+           pronouns: doc.data().pronounsID,
+           city: doc.data().cityID
+           }})
+       })
+   }
 
-
-render(){
-    return(
-
-        
-        <TouchableOpacity onPress={() => alert('Easter Egg!')} style = {styles.boxContainer}>
-            <View > 
-                <Text style = {styles.textLeft}>
-                    Name: {this.state.userEmail.name}{"\n"}Gender: {this.state.userEmail.gender} {"\n"}Age: {this.state.userEmail.age}{"\n"}Pronouns: {this.state.userEmail.pronouns}{"\n"}City:{this.state.userEmail.city}
-                    
-                </Text>
-            </View>
-
-
-
-        </TouchableOpacity>
-        
-
-        
-        
-
-    );
-}
-  
-
-
+   render(){
+       return(
+           <TouchableOpacity onPress={() => alert('Easter Egg!')} style = {styles.boxContainer}>
+               <View >
+                   <Text style = {styles.textLeft}>
+                       Name: {this.state.userEmail.name}{"\n"}Gender: {this.state.userEmail.gender} {"\n"}Age: {this.state.userEmail.age}{"\n"}Pronouns: {this.state.userEmail.pronouns}{"\n"}City: {this.state.userEmail.city}
+                   </Text>
+               </View>
+           </TouchableOpacity>
+       );
+   }
 }
 
 

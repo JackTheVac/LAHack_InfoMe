@@ -17,7 +17,7 @@ export default class NPW extends Component {
         <TouchableOpacity onPress={() => alert('Easter Egg!')} style = {styles.boxContainer}>
             <View>
                 <Text style = {styles.text}>
-                    Name: Jack{"\n"}Gender: Male{"\n"}Age: 19{"\n"}Pronouns: He/Him{"\n"}City: Chino Hills
+                    Name: Jack{"\n"}Gender: Male{"\n"}Age: 19{"\n"}Pronouns: He/Him/His{"\n"}City: Chino Hills
                     
                 </Text>
             </View>
@@ -29,7 +29,7 @@ export default class NPW extends Component {
             <TouchableOpacity onPress={() => alert('Easter Egg!')} style = {styles.boxContainer}>
                 <View>
                     <Text style = {styles.text}>
-                        Name: Harchet{"\n"}Gender: Male{"\n"}Age: 18{"\n"}Pronouns: He/Him{"\n"}City: Chino Hills
+                        Name: Harchet{"\n"}Gender: Male{"\n"}Age: 18{"\n"}Pronouns: He/Him/His{"\n"}City: Chino Hills
                         
                     </Text>
                 </View>
@@ -42,7 +42,7 @@ export default class NPW extends Component {
                 <TouchableOpacity onPress={() => alert('Easter Egg!')} style = {styles.boxContainer}>
                     <View>
                         <Text style = {styles.text}>
-                            Name: Ricky{"\n"}Gender: Male{"\n"}Age: 19{"\n"}Pronouns: He/Him{"\n"}City: Chino Hills
+                            Name: Ricky{"\n"}Gender: Male{"\n"}Age: 19{"\n"}Pronouns: He/Him/His{"\n"}City: Chino Hills
                             
                         </Text>
                     </View>
@@ -54,7 +54,7 @@ export default class NPW extends Component {
                     <TouchableOpacity onPress={() => alert('Easter Egg!')} style = {styles.boxContainer}>
                         <View>
                             <Text style = {styles.text}>
-                                Name: Sun{"\n"}Gender: Male{"\n"}Age: 19{"\n"}Pronouns: He/Him{"\n"}City: Chino Hills
+                                Name: Sun{"\n"}Gender: Male{"\n"}Age: 19{"\n"}Pronouns: He/Him/His{"\n"}City: Chino Hills
                                 
                             </Text>
                         </View>
