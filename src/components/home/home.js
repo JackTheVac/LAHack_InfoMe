@@ -18,7 +18,11 @@ export default class Home extends Component {
         translateXTabTwo: new Animated.Value(width),
         translateY: -1000,
         userEmail: {
-            name: ""
+            name: '',
+            gender:'',
+            age:'',
+            occupation:'',
+            city:''
         }
     }
 
@@ -30,7 +34,6 @@ export default class Home extends Component {
         })
         console.log(this.state.userEmail.name)
     }
-//   }
 
 /*testing
 componentDidMount(){

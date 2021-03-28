@@ -52,7 +52,7 @@ export default class UserCity extends Component {
 const styles = StyleSheet.create({
     container:{
         flex: 1,
-        backgroundColor: '#7CC480',
+        backgroundColor: '#C3FDCB',
     
     },
     buttonContainer: {
