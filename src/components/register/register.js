@@ -94,7 +94,7 @@ export default class Register extends Component {
 const styles = StyleSheet.create({
    container:{
        flex: 1,
-       backgroundColor: '#C3FDCB',
+       backgroundColor: '#BCF4F5',
    },
 
    logoContainer : {
@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
    },
 
    title : {
-      color: '#fff',
+      color: 'red',
       marginTop: 10,
       textAlign: 'center',
       opacity: 0.5,

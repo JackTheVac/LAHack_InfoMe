@@ -20,7 +20,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation'
 
 
-const AppColor = "#C1CBFC";
+const AppColor = "#FFB7C3";
 
 
 const AppStackNavigator = createStackNavigator(

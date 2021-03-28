@@ -37,7 +37,7 @@ render(){
         
         <TouchableOpacity onPress={() => alert('Harchet is Brown')} style = {styles.boxContainer}>
             <View > 
-                <Text style = {styles.text}>
+                <Text style = {styles.textLeft}>
                     Name: {this.state.userEmail.name}{"\n"}Gender: {this.state.userEmail.gender} {"\n"}Age: {this.state.userEmail.age}{"\n"}Occupation: {this.state.userEmail.occupation}{"\n"}City:{this.state.userEmail.city}
                     
                 </Text>
@@ -71,15 +71,17 @@ const styles = StyleSheet.create({
         margin:  10,
     },
 
-    text: {
+    textLeft: {
+        
         color: "#3E5AF5",
         //textAlign: "center",
         paddingBottom: 15,
         paddingLeft: 20,
         fontSize: 25,
 
-    }
+    },
 
+    
 
 
 
