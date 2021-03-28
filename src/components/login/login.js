@@ -16,7 +16,7 @@ import * as firebase from 'firebase';
 //   .doc('ABC')
 //   .get();
 
-const BGCforAPP = '#C3FDCB'
+const BGCforAPP = '#BCF4F5'
 
 export default class Login extends Component {
     constructor(props){

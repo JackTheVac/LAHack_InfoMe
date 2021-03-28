@@ -62,7 +62,7 @@ export default class Gender extends Component {
 const styles = StyleSheet.create({
     container:{
         flex: 1,
-        backgroundColor: '#C3FDCB',
+        backgroundColor: '#BCF4F5',
         justifyContent: 'center'
     },
 

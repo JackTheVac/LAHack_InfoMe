@@ -98,7 +98,7 @@ end testing */
             translateY
         } = this.state;
         return (
-            <View style={{ flex: 1, backgroundColor: '#C3FDCB'}}>
+            <View style={{ flex: 1, backgroundColor: '#BCF4F5'}}>
                 <View
                     style={{
                     width: "90%",
@@ -215,7 +215,7 @@ end testing */
 const styles = StyleSheet.create({
     container:{
         flex: 1,
-        backgroundColor: '#C3FDCB',
+        backgroundColor: '#BCF4F5',
     },
 
     logoContainer : {
