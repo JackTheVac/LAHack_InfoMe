@@ -40,7 +40,7 @@ export default class Register extends Component {
         return (
         <KeyboardAvoidingView behavior = "padding" style = {styles.container}>
             <View style = {styles.logoContainer}>
-                <Image source = { require('../../../assets/InfoMeLogo.png') }/>
+                <Image source = { require('../../../assets/LaHacksLogo.png') }/>
                 <Text style = {styles.title}>Spread Awareness</Text>
             </View>
 
