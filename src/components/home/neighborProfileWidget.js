@@ -14,7 +14,7 @@ export default class NPW extends Component {
 
         npArray.push(
 
-        <TouchableOpacity onPress={() => alert('Harchet is Brown')} style = {styles.boxContainer}>
+        <TouchableOpacity onPress={() => alert('Easter Egg!')} style = {styles.boxContainer}>
             <View>
                 <Text style = {styles.text}>
                     Name: Jack{"\n"}Gender: Jack{"\n"}Age: 19{"\n"}Occupation: Student{"\n"}City: Chino Hills
