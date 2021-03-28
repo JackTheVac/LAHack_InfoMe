@@ -18,11 +18,12 @@ export default class Home extends Component {
         translateXTabTwo: new Animated.Value(width),
         translateY: -1000,
         userEmail: {
-            name: '',
-            gender:'',
-            age:'',
-            occupation:'',
-            city:''
+            name: "",
+            gender:"",
+            occupation:"",
+            age:"",
+            city:"",
+
         }
     }
 
@@ -31,9 +32,11 @@ export default class Home extends Component {
         db.doc(user.email).get().then(doc => {
             console.log(doc.data().nameID);
             this.setState({userEmail: {name: doc.data().nameID}})
+            this.setState({userEmail: {gender: doc.data().genderID}})
         })
         console.log(this.state.userEmail.name)
     }
+//   }
 
 /*testing
 componentDidMount(){
@@ -195,12 +198,12 @@ end testing */
                         }}>
 
                             <NPW/>
-                            <Text>
+                            {/* <Text>
                                 {this.state.userEmail.name}
                             </Text>
                             <Text>
                                 {this.state.userEmail.name}
-                            </Text>
+                            </Text> */}
                         </Animated.View>
                     </ScrollView>
                 </View>
